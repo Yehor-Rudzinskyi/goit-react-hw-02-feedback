@@ -1,4 +1,5 @@
 import { createUseStyles } from 'react-jss';
+import PropTypes from 'prop-types';
 
 const useStyles = createUseStyles({
   container: {
@@ -25,6 +26,11 @@ const Section = ({ title, children }) => {
       {children}
     </div>
   );
+};
+
+Section.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.element.isRequired,
 };
 
 export default Section;
